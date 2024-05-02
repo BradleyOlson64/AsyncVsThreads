@@ -1,9 +1,13 @@
-fn main() {
-    println!("Hello, world!");
-}
+mod async_job_handler;
+mod threaded_job_handler;
+mod vanilla_job_handler;
 
 use std::time::Duration;
 type Count = u32;
+
+fn main() {
+    println!("Hello, world!");
+}
 
 #[derive(Debug)]
 enum Job {
@@ -13,13 +17,5 @@ enum Job {
 
 // Practice abstraction with trait JobHandler
 trait JobHandler {
-    fn handle_job(&mut self, job: Job) -> Duration;
-}
-
-struct AsyncJobHandler {
-
-}
-
-struct ThreadedJobHandler {
-    
+    async fn handle_job(&mut self, job: Job) -> Duration;
 }
