@@ -4,3 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+futures = { version = "0.3.30" }
+async-std = { version = "1.12.0" }

@@ -8,3 +8,7 @@ Working tasks expected outcome: Async should be about as performant as normal si
 
 Potential extensions:
 - Pass through functions as jobs rather than enum variants
+- Create Job trait allowing either functions or enum variant jobs to be passed
+- Add Tokio async and Tokio threaded job handlers
+- Add error handling and comprehensive custom error type
+- Make printing pretty using print color crate
